@@ -14,5 +14,10 @@ class PagesController extends Controller {
         return view('pages.show')->withPage(Page::find($id));
     }
 
+    public function rose($id)
+    {
+        return view('pages.show')->withPage(Page::find($id));
+    }
+
 
 }

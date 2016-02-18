@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Blog Login Form Responsive widget Design :: w3layouts</title>
+<title>vince login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <meta name="keywords" content="Blog Login Form Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates"/>
@@ -17,10 +17,11 @@
 <div class="login-box">
 	<div class="camera"> </div>
 	<h2>vince's blog</h2>
-	<form>
-		<input type="text" class="text" value="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}" >
-		<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
-		<div class="btn"><input type="submit" onclick="myFunction()" value="Continue"></div>
+	<form method="POST" id="loginForm" action="{{ url('/auth/login') }}">
+	    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+		<input type="text" class="text" value="USERNAME" onfocus="if (this.value == 'USERNAME') {this.value = ''};" onblur="if (this.value == '') {this.value = 'USERNAME';}" >
+		<input type="password" value="Password" onfocus="if (this.value == 'Password') {this.value = ''};" onblur="if (this.value == '') {this.value = 'Password';}">
+		<div class="btn"><input type="submit" value="SING IN" onclick="document.getElementById("loginForm").submit();"></div>
 	</form>
 </div>
 <!--//End-login-form-->
