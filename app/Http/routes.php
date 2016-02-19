@@ -29,7 +29,5 @@ Route::get('pages/pre_add',function () {
     return view('pages.pre_add');
 });
 
-Route::get('pages/rose',function () {
-    return view('pages.rose');
-});
+Route::get('pages/rose', 'PagesController@rose');
 
