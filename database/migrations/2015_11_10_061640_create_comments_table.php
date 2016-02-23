@@ -18,7 +18,8 @@ class CreateCommentsTable extends Migration {
             $table->string('website')->nullable();
             $table->text('content')->nullable();
             $table->integer('page_id');
-            $table->timestamps();
+            $table->integer('created_at');
+            $table->integer('updated_at');
         });
     }
 

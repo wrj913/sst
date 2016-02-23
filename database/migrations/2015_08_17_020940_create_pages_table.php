@@ -19,7 +19,8 @@ class CreatePagesTable extends Migration {
             $table->string('slug')->nullable();
             $table->text('body')->nullable();
             $table->integer('user_id');
-            $table->timestamps();
+            $table->integer('created_at');
+            $table->integer('updated_at');
         });
 	}
 

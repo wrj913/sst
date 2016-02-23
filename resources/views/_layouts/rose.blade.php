@@ -4,6 +4,9 @@
 	<title>Blogname a Blogging Category Flat Bootstarp  Responsive Web Template | Home :: w3layouts</title>
 	<link href="http://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 	<link href="{{asset('/css/dress/rose/style.css')}}" rel='stylesheet' type='text/css' />
+	 @if(isset($current_action))
+	<link href="{{asset('/css/' . $current_action['class'] . '/' . $current_action['method'] . '.css')}}" rel='stylesheet' type='text/css' />
+	@endif
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Blogname Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -33,9 +36,9 @@
 <body>
 <!---strat-banner---->
 <div class="banner">				
-	 <div class="header">  
-		  <div class="container">
-			  <div class="logo">
+	<div class="header">
+		<div class="container">
+			<div class="logo">
 					<a href="index.html"> <img src="{{asset('/images/bases/rose/logo.png')}}" title="soup" /></a>
 			 </div>
 			 <!---start-top-nav---->
@@ -44,17 +47,16 @@
 				   <ul>
 						<li class="active"><a href="index.html">HOME</a></li>						
 						<li><a href="contact.html">CONTACT</a></li>	
-						<li><a href="terms.html">TERMS</a></li>						
+						<li><a href="terms.html">TERMS</a></li>
 						<div class="clearfix"> </div>
 				 </ul>
 			 </div>
 			 <div class="clearfix"></div>
-					<script>
-					$("span.menu").click(function(){
-					$(".top-menu ul").slideToggle("slow" , function(){
-					});
-					});
-					</script>
+            <script>
+                $("span.menu").click(function(){
+                    $(".top-menu ul").slideToggle("slow" , function(){});
+                });
+            </script>
 				<!---//End-top-nav---->					
 		 </div>
 	 </div>

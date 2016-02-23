@@ -16,7 +16,8 @@ class HomeController extends Controller {
     */
 
     public function index() {
-        return view('home')->withPages(Page::all());
+        view()->share('current_action', get_current_action());
+        return view('home.index')->withPages(Page::all());
     }
 
 }

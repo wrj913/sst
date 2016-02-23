@@ -20,7 +20,8 @@ class CreateArticlesTable extends Migration {
             $table->text('body')->nullable();
             $table->string('image')->nullable();
             $table->integer('user_id');
-            $table->timestamps();
+            $table->integer('created_at');
+            $table->integer('updated_at');
         });
 	}
 
