@@ -23,7 +23,7 @@
                 <a href="{{ URL('pages/'.$page->id) }}">
                     <input type="radio" name="tl-group" checked/>
                     <label></label>
-                    <div class="thumb user-4"><span>{{$page->updated_at->format('d M')}}</span></div>
+                    <div class="thumb" style="background-image: url('../images/temp.jpg')"><span>{{$page->updated_at->format('d M')}}</span></div>
                     <div class="content-perspective">
                         <div class="content">
                             <div class="content-inner">
