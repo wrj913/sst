@@ -39,7 +39,7 @@
 	<div class="header">
 		<div class="container">
 			<div class="logo">
-					<a href="index.html"> <img src="{{asset('/images/bases/rose/logo.png')}}" title="soup" /></a>
+					<a href="/">vince's blog</a>
 			 </div>
 			 <!---start-top-nav---->
 			 <div class="top-menu">
@@ -65,6 +65,7 @@
 			 <h1>Lorem ipsum dolor sit amet</h1>
 			 <h2>cliquam tincidunt mauris</h2>
 		 </div>
+		  @if(isset($banner_links))
 		 <div class="banner-links">
 			 <ul>
 				 <li class="active"><a href="#">LOREM IPSUM</a></li>
@@ -73,6 +74,7 @@
 				 <div class="clearfix"></div>
 			 </ul>
 		 </div>
+         @endif
 	 </div>
 </div>
 <!---//End-banner---->
