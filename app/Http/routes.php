@@ -12,11 +12,11 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('home', 'HomeController@index');
 
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
-
 Route::get('auth/new_login', 'Auth\AuthController@new_login');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function () {

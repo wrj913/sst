@@ -19,8 +19,15 @@
 	<h2>vince's blog</h2>
 	<form method="POST" id="loginForm" action="{{ url('/auth/login') }}">
 	    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-		<input type="text" class="text" value="USERNAME" onfocus="if (this.value == 'USERNAME') {this.value = ''};" onblur="if (this.value == '') {this.value = 'USERNAME';}" >
-		<input type="password" value="Password" onfocus="if (this.value == 'Password') {this.value = ''};" onblur="if (this.value == '') {this.value = 'Password';}">
+	    <div class="form-group">
+		    <input type="text" name="email" class="text" value="USERNAME" onfocus="if (this.value == 'USERNAME') {this.value = ''};" onblur="if (this.value == '') {this.value = 'USERNAME';}" >
+		</div>
+		<div class="form-group">
+		    <input type="password"  name="password" value="Password" onfocus="if (this.value == 'Password') {this.value = ''};" onblur="if (this.value == '') {this.value = 'Password';}">
+		</div>
+		<div class="clear form-group">
+		    <input type="checkbox" name="remember"> Remember Me
+		</div>
 		<div class="btn"><input type="submit" value="SING IN" onclick="document.getElementById("loginForm").submit();"></div>
 	</form>
 </div>

@@ -162,6 +162,12 @@ form li {
     -moz-border-radius: 0.3em;
 }
 
+form .form-group {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: left;
+    color: #E8D6AF;
+}
+
 input[type="text"] {
     font-family: 'Roboto', sans-serif;
     width: 231px;

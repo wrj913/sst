@@ -2,23 +2,13 @@
 
 @section('content')
 <div id="title" style="text-align: center;">
-    <h1>Learn Laravel 5</h1>
+    <h1>Boris footprints</h1>
     <div style="padding: 5px; font-size: 16px;">{{ Inspiring::quote() }}</div>
 </div>
 <hr>
 <div id="content">
     <ul class="timeline">
         @foreach ($pages as $page)
-        {{--<li class="event">--}}
-            {{--<a href="{{ URL('pages/'.$page->id) }}">--}}
-                {{--<div class="title">--}}
-                    {{--<h4>{{ $page->title }}</h4>--}}
-                {{--</div>--}}
-                {{--<div class="body">--}}
-                    {{--<p>{!! $page->body !!}</p>--}}
-                {{--</div>--}}
-            {{--</a>--}}
-            {{--</li>--}}
             <li class="event">
                 <a href="{{ URL('pages/'.$page->id) }}">
                     <input type="radio" name="tl-group" checked/>
