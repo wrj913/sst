@@ -34,7 +34,7 @@ class AuthController extends Controller {
         $this->middleware('guest', ['except' => 'getLogout']);
     }
 
-    public function new_login() {
+    public function getLogin() {
         //取得指定位址的內容，並儲存至text
         $bingtext = get_url_content('http://cn.bing.com/');
         //获取g_img={url:'与'之间的内容
@@ -44,7 +44,7 @@ class AuthController extends Controller {
         //提取数组里第二个值
         $bingurlcontents = $bingtarStr[1];
 
-        return view('auth.new_login')->with('bg_img', $bingurlcontents);
+        return view('auth.login')->with('bg_img', $bingurlcontents);
     }
 
 }

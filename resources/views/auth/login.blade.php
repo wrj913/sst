@@ -1,61 +1,42 @@
-@extends('app')
-
-@section('content')
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Login</div>
-				<div class="panel-body">
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
-
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label class="col-md-4 control-label">Password</label>
-							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="remember"> Remember Me
-									</label>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">Login</button>
-
-								<a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
+<!DOCTYPE html>
+<html>
+<head>
+<title>vince login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<meta name="keywords" content="Blog Login Form Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates"/>
+<link href="{{ asset('/css/dress/w3l/app.css') }}" rel="stylesheet">
+<!--webfonts-->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+<!--/webfonts-->
+</head>
+<body style="background: url('{{ $bg_img }}') no-repeat 0px 0px;">
+<h1></h1>
+<!--start-main-->
+<div class="login-box">
+	<div class="camera"> </div>
+	<h2>vince's blog</h2>
+	<form method="POST" id="loginForm" action="{{ url('/auth/login') }}">
+	    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+	    <div class="form-group">
+		    <input type="text" name="email" class="text" value="USERNAME" onfocus="if (this.value == 'USERNAME') {this.value = ''};" onblur="if (this.value == '') {this.value = 'USERNAME';}" >
 		</div>
-	</div>
+		<div class="form-group">
+		    <input type="password"  name="password" value="Password" onfocus="if (this.value == 'Password') {this.value = ''};" onblur="if (this.value == '') {this.value = 'Password';}">
+		</div>
+		<div class="clear form-group">
+		    <input type="checkbox" name="remember"> Remember Me
+		</div>
+		<div class="btn"><input type="submit" value="SING IN" onclick="document.getElementById("loginForm").submit();"></div>
+	</form>
 </div>
-@endsection
+<!--//End-login-form-->
+
+<!--start-copyright-->
+<div class="copy-right">
+	<p>Yearning for freedom</p>
+</div>
+<!--//end-copyright-->
+</body>
+</html>
