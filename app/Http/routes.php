@@ -20,7 +20,7 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::get('auth/new_login', 'Auth\AuthController@new_login');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function () {
-    Route::get('/', 'AdminHomeController@index');
+    Route::get('/', 'PagesController@index');
     Route::resource('pages', 'PagesController');
 });
 Route::get('pages/{id}', 'PagesController@show')->where('id', '[0-9]+');

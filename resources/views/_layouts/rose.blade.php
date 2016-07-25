@@ -114,11 +114,7 @@
 	 </div>
 </div>
 <!---fotter/-->
-<div class="copywrite">
-	 <div class="container">
-	 <p>Copyrights &copy; 2015 Blogging All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts</a></p>
-</div>
-</div>
+
 <!---->
 <script type="text/javascript">
 		$(document).ready(function() {

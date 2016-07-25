@@ -7,6 +7,11 @@ class Page extends Model {
         return $this->hasMany('App\Comment', 'page_id', 'id');
     }
 
+    public function get_by_page()
+    {
+
+    }
+
     protected function getDateFormat()
     {
         return 'U';

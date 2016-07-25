@@ -10,6 +10,16 @@ use Redirect, Input, Auth;
 class PagesController extends Controller {
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index() {
+        $pages = Page::simplePaginate(3);
+        return view('admin.pages.index')->withPages($pages);
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return Response
