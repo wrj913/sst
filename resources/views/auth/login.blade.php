@@ -20,15 +20,18 @@
 	<form method="POST" id="loginForm" action="{{ url('/auth/login') }}">
 	    <input type="hidden" name="_token" value="{{ csrf_token() }}">
 	    <div class="form-group">
-		    <input type="text" name="email" class="text" value="USERNAME" onfocus="if (this.value == 'USERNAME') {this.value = ''};" onblur="if (this.value == '') {this.value = 'USERNAME';}" >
+		    <input type="text" name="email" class="text" value=""  >
+		    <span><?=current($errors->get('email'))?></span>
 		</div>
+
 		<div class="form-group">
-		    <input type="password"  name="password" value="Password" onfocus="if (this.value == 'Password') {this.value = ''};" onblur="if (this.value == '') {this.value = 'Password';}">
+		    <input type="password"  name="password" value="">
+		    <span><?=current($errors->get('password'))?></span>
 		</div>
 		<div class="clear form-group">
 		    <input type="checkbox" name="remember"> Remember Me
 		</div>
-		<div class="btn"><input type="submit" value="SING IN" onclick="document.getElementById("loginForm").submit();"></div>
+		<div class="btn"><input type="submit" value="SING IN" /></div>
 	</form>
 </div>
 <!--//End-login-form-->
@@ -38,5 +41,7 @@
 	<p>Yearning for freedom</p>
 </div>
 <!--//end-copyright-->
+<script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="{{asset('/js/bases/rose/login.js')}}"></script>
 </body>
 </html>
