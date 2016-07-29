@@ -124,7 +124,16 @@ h1 {
     color: #C33827;
     padding-top: 3em;
 }
-
+.mask {
+    background: url('../../../images/mask.png') center top no-repeat #eec375;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0.5;
+    width: 100%;
+    float: left;
+    height: 100%;
+}
 .login-box {
     background: url(../../../images/bases/w3l/blog_back.png) no-repeat 0px 0px;
     width: 25%;
@@ -134,6 +143,8 @@ h1 {
     text-align: center;
     background-size: 100%;
     vertical-align: middle;
+    z-index: 1;
+    position: relative;
 }
 
 .camera {

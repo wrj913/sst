@@ -12,6 +12,7 @@
 <!--/webfonts-->
 </head>
 <body style="background: url('{{ $bg_img }}') no-repeat 0px 0px;">
+<div class="mask"></div>
 <h1></h1>
 <!--start-main-->
 <div class="login-box">
