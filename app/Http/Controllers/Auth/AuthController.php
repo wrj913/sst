@@ -35,14 +35,19 @@ class AuthController extends Controller {
     }
 
     public function getLogin() {
+        /*
+
+
         //取得指定位址的內容，並儲存至text
         $bingtext = get_url_content('http://cn.bing.com/');
         //获取g_img={url:'与'之间的内容
         if (!preg_match( "/g_img={url:'(.*)'/Uis ",$bingtext, $match)) {
             preg_match( "/g_img={url: \"(.*)\"/Uis ",$bingtext, $match);
         }
+
         //去掉多余的
         $bingtarStr = str_replace("", "", $match);
+        */
         //提取数组里第二个值
         $bingurlcontents = isset($bingtarStr[1]) ? $bingtarStr[1] : '';
 

@@ -1,9 +1,3 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
 /* reset */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
@@ -124,6 +118,7 @@ h1 {
     color: #C33827;
     padding-top: 3em;
 }
+
 .mask {
     background: url('../../../images/mask.png') center top no-repeat #eec375;
     position: absolute;
@@ -134,6 +129,7 @@ h1 {
     float: left;
     height: 100%;
 }
+
 .login-box {
     background: url(../../../images/bases/w3l/blog_back.png) no-repeat 0px 0px;
     width: 25%;
@@ -179,9 +175,10 @@ form li {
 }
 
 form .form-group {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: left;
     color: #E8D6AF;
+    position: relative;
 }
 
 input[type="text"] {
@@ -255,10 +252,8 @@ input[type="submit"]:hover {
 }
 
 .remember {
-    text-align: center;
-    width: 57%;
     margin: 0 auto;
-    padding-top: 1em;
+    margin-bottom: 20px;
 }
 
 .btn {
@@ -270,7 +265,7 @@ input[type="submit"]:hover {
     color: #eee;
     margin-top: 15px;
     text-shadow: 0 0 3px #333;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*--start-responsive-design--*/
@@ -368,7 +363,7 @@ input[type="submit"]:hover {
     }
 
     .camera {
-        background: url(../../../images/bases/w3l/camera.png) no-repeat 11px 2px;
+        background: url(../images/bases/w3l/camera.png) no-repeat 11px 2px;
         width: 85px;
         background-size: 75%;
         height: 55px;
@@ -381,6 +376,13 @@ input[type="submit"]:hover {
 
     h1 {
         padding-top: 1em;
+    }
+
+    .error-box .form-error {
+        background-color: #fff;
+        display: inline-block;
+        line-height: 16px;
+        height: 16px;
     }
 }
 

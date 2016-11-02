@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <meta name="keywords" content="Blog Login Form Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates"/>
-<link href="{{ asset('/css/dress/w3l/app.css') }}" rel="stylesheet">
+<link href="{{ asset('/css/login.css') }}" rel="stylesheet">
 <!--webfonts-->
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
@@ -18,22 +18,25 @@
 <div class="login-box">
 	<div class="camera"> </div>
 	<h2>vince's blog</h2>
-	<form method="POST" id="loginForm" action="{{ url('/auth/login') }}">
+	<form method="POST" id="loginForm" action="{{ url('/login') }}">
 	    <input type="hidden" name="_token" value="{{ csrf_token() }}">
 	    <div class="form-group">
-		    <input type="text" name="email" class="text" value=""  >
-		    <span><?=current($errors->get('email'))?></span>
+		    <input type="text" name="email" class="text" value="">
+
 		</div>
 
 		<div class="form-group">
 		    <input type="password"  name="password" value="">
-		    <span><?=current($errors->get('password'))?></span>
 		</div>
 		<div class="clear form-group">
-		    <input type="checkbox" name="remember"> Remember Me
+		    <input type="checkbox" name="remember" class="remember"> Remember Me
 		</div>
 		<div class="btn"><input type="submit" value="SING IN" /></div>
 	</form>
+	<div class="error-box">
+        <span class="form-error"><?=current($errors->get('email'))?></span>
+        <span class="form-error"><?=current($errors->get('password'))?></span>
+    </div>
 </div>
 <!--//End-login-form-->
 
